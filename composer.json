@@ -1,0 +1,44 @@
+{
+    "name": "eboseogbidi/smartpaymentrouter",
+    "description": "This package can intelligently route payment transactions to the most suitable payment processor based on various factors such as transaction cost, reliability, and currency support.",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Eboseogbidi\\Smartpaymentrouter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eboseogbidi\\Smartpaymentrouter\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "Eboseogbidi\\Smartpaymentrouter\\Providers\\SmartPaymentRouterProvider" 
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "EbosetaleseDunjoyin",
+            "email": "eboselese@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "11.5.x-dev",
+        "mockery/mockery": "2.0.x-dev",
+        "orchestra/testbench": "3.4.x-dev"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}
