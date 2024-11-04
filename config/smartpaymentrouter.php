@@ -2,6 +2,7 @@
 
 return [
     'routing_rules' => [
+        'active' => true,
         'transaction_cost' => true,
         'reliability' => true,
         'currency_support' => true,

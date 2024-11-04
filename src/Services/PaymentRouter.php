@@ -65,8 +65,14 @@ class PaymentRouter
         $bestScore = -1;
 
         foreach ($this->processors as $processorKey => $details) {
+            //skip in active processors
+            if (\config('smartpaymentrouter.routing_rules.active', true) && (!isset($details['status']) || $details['status'] !== 'active')) {
+                continue;
+            }
             if (in_array($currency, $details['currencies'])) {
-                $score = 0; 
+                $score = 0;
+
+                
 
                 if (\config('smartpaymentrouter.routing_rules.transaction_cost', true)) {
                     $score += 100 - $details['transaction_cost']; // Higher score for lower cost
