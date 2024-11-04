@@ -15,6 +15,7 @@ return [
             'transaction_cost' => 1.8,
             'reliability' => 95,
             'currencies' => ['USD', 'GBP'],
+            'active' => true,
         ],
     ],
 ];
