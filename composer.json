@@ -2,6 +2,7 @@
     "name": "eboseogbidi/smartpaymentrouter",
     "description": "This package can intelligently route payment transactions to the most suitable payment processor based on various factors such as transaction cost, reliability, and currency support.",
     "type": "package",
+    "version": "1.0.0",
     "license": "MIT",
     "autoload": {
         "psr-4": {
