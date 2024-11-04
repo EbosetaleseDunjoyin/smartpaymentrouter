@@ -10,6 +10,15 @@ You can install the package via composer:
 composer require eboseogbidi/smartpaymentrouter-config
 ```
 
+
+## Migration
+
+Migrate the schema for the payment transaction log this helps to improve the reliability of the different payment processors:
+
+```bash
+php artisan migrate
+```
+
 ## Configuration
 
 Publish the configuration file:
@@ -17,13 +26,18 @@ Publish the configuration file:
 ```bash
 php artisan vendor:publish --tag=smartpaymentrouter-config
 ```
-
 This will create a `config/smartpaymentrouter.php` file where you can configure your payment processors.
 
 ### Basic Configuration Structure
 
 ```php
 return [
+    'routing_rules' => [
+        'transaction_cost' => true,
+        'reliability' => true,
+        'currency_support' => true,
+    ],
+    
     'processors' => [
         'stripe' => [
             'name' => "Stripe",

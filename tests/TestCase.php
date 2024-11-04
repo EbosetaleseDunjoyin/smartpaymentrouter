@@ -2,15 +2,15 @@
 
 namespace Eboseogbidi\Smartpaymentrouter\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
+use \Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
-    protected function setUp(): void
-    {
-        parent::setUp();
-        // Add any setup code needed for all tests
-    }
+    // protected function setUp(): void
+    // {
+    //     parent::setUp();
+    //     // Add any setup code needed for all tests
+    // }
 
     protected function getPackageProviders($app)
     {

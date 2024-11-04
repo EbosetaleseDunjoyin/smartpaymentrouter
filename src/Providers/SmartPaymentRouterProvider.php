@@ -17,6 +17,8 @@ class SmartPaymentRouterProvider extends ServiceProvider
         $this->app->singleton(PaymentRouter::class, function ($app): PaymentRouter {
             return new PaymentRouter();
         });
+
+        $this->mergeConfigFrom(__DIR__ . '/../../config/smartpaymentrouter.php', 'smartpaymentrouter');
     }
 
     /**

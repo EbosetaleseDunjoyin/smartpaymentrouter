@@ -4,8 +4,9 @@ namespace Eboseogbidi\Smartpaymentrouter\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Eboseogbidi\Smartpaymentrouter\Processors\StripeProcessor;
+use Eboseogbidi\Smartpaymentrouter\Tests\Integration\IntegrationTestCase;
 
-class StripeProcessorTest extends TestCase
+class StripeProcessorTest extends IntegrationTestCase
 {
     private StripeProcessor $processor;
 
