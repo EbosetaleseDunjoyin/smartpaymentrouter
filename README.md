@@ -7,7 +7,7 @@ A flexible and intelligent payment routing system that helps you manage multiple
 You can install the package via composer:
 
 ```bash
-composer require eboseogbidi/smartpaymentrouter-config
+composer require eboseogbidi/smartpaymentrouter
 ```
 
 
@@ -37,7 +37,7 @@ return [
         'reliability' => true,
         'currency_support' => true,
     ],
-    
+
     'processors' => [
         'stripe' => [
             'name' => "Stripe",
